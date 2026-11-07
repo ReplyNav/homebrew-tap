@@ -7,11 +7,17 @@ cask "replynav" do
   sha256 arm:   "42aaf1318db194a53a85651d408e06e0a0bc31165bf0570fa51f1a67e5bdc6d6",
          intel: "76a8e4db967a19d82a6eba24520ca0ef1152b861f3a9ba9b07971843df0b7aaa"
 
-  url "https://replynav.s3.eu-west-1.amazonaws.com/releases/stable/#{version}/ReplyNav-osx-#{arch}.dmg",
-      verified: "replynav.s3.eu-west-1.amazonaws.com/releases/"
+  url "https://replynav.s3.eu-west-1.amazonaws.com/releases/stable/#{version}/ReplyNav-osx-#{arch}.dmg"
   name "ReplyNav"
   desc "AI writing assistant for selected text"
   homepage "https://replynav.com/"
+
+  livecheck do
+    url "https://replynav.s3.eu-west-1.amazonaws.com/releases/stable/latest-macos.json"
+    strategy :json do |json|
+      json["version"]
+    end
+  end
 
   # The app updates itself from the release manifests.
   auto_updates true
