@@ -3,9 +3,9 @@
 cask "replynav" do
   arch arm: "arm64", intel: "x64"
 
-  version "0.32.0"
-  sha256 arm:   "860abed943be676f9dd7ab8fff6eca8df88d5d85a4b34465df763b738194dbd9",
-         intel: "e3c4fae6aeed2c246af43ec467539182acfd50448ad206b2916cd60d99aec60f"
+  version "0.33.0"
+  sha256 arm:   "e784df95683fdf64828d468d3507ce77a80622c994682e0128cb0f1ba56c20d1",
+         intel: "87cb3dd9ae898790e3e21cfb24fa247c148bcf312a4b67793d9f49e6bd3d9ac5"
 
   url "https://replynav.s3.eu-west-1.amazonaws.com/releases/stable/#{version}/ReplyNav-osx-#{arch}.dmg"
   name "ReplyNav"
